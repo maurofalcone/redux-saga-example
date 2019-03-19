@@ -4,8 +4,8 @@ import './style.css'
 class Login extends Component {
     render() {
         return (
-            <div>
-                dsadasdas
+            <div className="loginContainer">
+                Login
             </div>
         )
     }
