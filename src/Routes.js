@@ -9,16 +9,14 @@ import Register from './pages/register'
 class Routes extends Component {
     render () {
         return (
-            <App>
-                <Router>
-                    <Switch>
-                        <Route exact path="/news" component={News}/>
-                        <Route exact path="/login" component={Login}/>
-                        <Route exact path="/profile/:id" component={Profile}/>
-                        <Route exact path="/register" component={Register}/>
-                    </Switch>
-                </Router>
-            </App>
+            <Router>
+                <Switch>
+                    <Route exact path="/news" component={News}/>
+                    <Route exact path="/login" component={Login}/>
+                    <Route exact path="/profile/:id" component={Profile}/>
+                    <Route exact path="/register" component={Register}/>
+                </Switch>
+            </Router>
         )
     }
 }
