@@ -1,0 +1,18 @@
+.button-accept, .button-cancel {
+    width: 5vw;
+    height: 5vh;
+    border-style: none;
+    border-radius: 0.5rem;
+    font-size: 12pt;
+    margin: 1rem;
+}
+
+.button-cancel {
+    color: #FFF;
+    background-color: #15A;
+}
+
+.button-accept {
+    color: #15A;
+    background-color: #FFF;
+}
