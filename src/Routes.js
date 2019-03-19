@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import App from './components/App'
 import News from './pages/news'
 import Login from './pages/login'
 import Profile from './pages/profile'
