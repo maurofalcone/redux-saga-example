@@ -1,4 +1,4 @@
-/* div.loginContainer {
+div.loginContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,4 +6,4 @@
     border-style: none;
     min-height: 50vh;
     width: 50vw;
-} */
+}
