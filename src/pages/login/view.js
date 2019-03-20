@@ -13,22 +13,30 @@ class Login extends Component {
             password:''
         }
     }
+
+    handleLogout = (e) => {
+        const { history, logout } = this.props
+        e.preventDefault()
+        logout()
+        history.push('/login')
+    }
     
-    handleClick = (e) => {
+    handleLogin = (e) => {
+        const { login } = this.props
         e.preventDefault()
         let user = {
             username:this.state.username,
             password:this.state.password
         }
-        this.props.login(user)
+        login(user)
     }
     
     handlePassword = (e) => {
-        this.setState({password:e.target.value})
+        this.setState({ password:e.target.value })
     }
 
     handleUsername = (e) => {
-        this.setState({username:e.target.value})
+        this.setState({ username:e.target.value })
     }
 
     render() {
@@ -36,16 +44,21 @@ class Login extends Component {
             return (
                 <div className="loginContainer">
                     <Form>
-                        <Input placeholder="Username" onChange={this.handleUsername} type="text"></Input>
-                        <Input placeholder="Password" onChange={this.handlePassword} type="password"></Input>
-                        <Button className="button-accept" name="Accept" onClick={this.handleClick}></Button>
+                        <Input placeholder="Username" onChange={ this.handleUsername } type="text"></Input>
+                        <Input placeholder="Password" onChange={ this.handlePassword } type="password"></Input>
+                        <Button className="button-accept" name="Login" onClick={ this.handleLogin }></Button>
                     </Form>
                 </div>
             )
         }
         else {
             return (
-                <div>You-re already logged in</div>
+                <div>
+                    You-re already logged in
+                    <div>
+                        <Button className="button-accept" name="Logout" onClick={ this.handleLogout }></Button>
+                    </div>
+                </div>
             )
         }
     }
