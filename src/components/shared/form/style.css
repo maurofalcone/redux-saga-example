@@ -1,0 +1,11 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#2A303B;
+    border-radius: 0.5rem;
+    height: 100%;
+    width: 100%;
+    color:#FFF;
+}
